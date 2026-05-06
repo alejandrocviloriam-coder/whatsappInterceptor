@@ -90,11 +90,17 @@ class SupabaseService private constructor(private val context: Context) {
                 val response = client.newCall(request).execute()
                 val success = response.isSuccessful
                 
+                if (success) {
+                    Log.d(TAG, "Mensaje guardado en Supabase correctamente")
+                } else {
+                    Log.e(TAG, "Error en Supabase: ${response.code}")
+                }
+                
                 response.close()
-                return@withContext success
+                success
 
             } catch (e: Exception) {
-                Log.e(TAG, "Error enviando mensaje a Supabase: ${e.message}")
+                Log.e(TAG, "Excepción al guardar mensaje: ${e.message}")
                 false
             }
         }
@@ -130,10 +136,10 @@ class SupabaseService private constructor(private val context: Context) {
                 val success = response.isSuccessful
                 
                 response.close()
-                return@withContext success
+                success
 
             } catch (e: Exception) {
-                Log.e(TAG, "Error actualizando contacto en Supabase: ${e.message}")
+                Log.e(TAG, "Error actualizando contacto: ${e.message}")
                 false
             }
         }
