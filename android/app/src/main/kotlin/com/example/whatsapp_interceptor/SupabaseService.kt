@@ -38,7 +38,7 @@ class SupabaseService private constructor(private val context: Context) {
         }
 
         fun markMessageAsProcessed(messageId: String) {
-            processedMessageIds = System.currentTimeMillis()
+            processedMessageIds[messageId] = System.currentTimeMillis()
         }
 
         fun cleanOldMessages() {
@@ -91,9 +91,9 @@ class SupabaseService private constructor(private val context: Context) {
                 val success = response.isSuccessful
                 
                 if (success) {
-                    Log.d(TAG, "Mensaje guardado en Supabase correctamente")
+                    Log.d(TAG, "Mensaje guardado en Supabase - ID: $messageId")
                 } else {
-                    Log.e(TAG, "Error en Supabase: ${response.code}")
+                    Log.e(TAG, "Error Supabase: ${response.code} - ${response.message}")
                 }
                 
                 response.close()
@@ -135,11 +135,15 @@ class SupabaseService private constructor(private val context: Context) {
                 val response = client.newCall(request).execute()
                 val success = response.isSuccessful
                 
+                if (success) {
+                    Log.d(TAG, "Contacto actualizado en Supabase: $contactId")
+                }
+                
                 response.close()
                 success
 
             } catch (e: Exception) {
-                Log.e(TAG, "Error actualizando contacto: ${e.message}")
+                Log.e(TAG, "Error actualizando contacto en Supabase: ${e.message}")
                 false
             }
         }
