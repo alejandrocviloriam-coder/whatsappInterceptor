@@ -1,0 +1,73 @@
+# Flutter/Dart/Pub
+.dart_tool/
+.buildlog
+.packages
+.pub-cache/
+.pub/
+.packages
+.pub/
+.flutter-plugins
+.flutter-plugins-dependencies
+.generated/
+
+# Build outputs
+build/
+ios/Flutter/Flutter.framework/
+ios/Flutter/Flutter.podspec
+ios/Pods/
+ios/Runner.xcworkspace/
+ios/Podfile.lock
+android/.gradle/
+android/app/build/
+**/build/
+
+# Generated Xcode files
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.xcuserstate
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Android Studio
+.gradle/
+/local.properties
+/captures/
+.externalNativeBuild/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Flutter pub
+pubspec.lock
+
+# Firebase intermediate files
+firebase-debug.log
+
+# Others
+*.log
+
+# Ignore package directories
+**/.dart_tool/
+**/.pub/

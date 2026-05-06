@@ -1,0 +1,42 @@
+name: whatsapp_interceptor
+description: Una aplicación para interceptar y almacenar mensajes de WhatsApp antes de ser enviados.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  shared_preferences: 2.0.15
+  permission_handler: ^11.0.0
+  path_provider: ^2.0.15
+  uuid: ^3.0.7
+  intl: ^0.18.0
+  url_launcher: ^6.1.5
+  cupertino_icons: ^1.0.5
+  provider: ^6.0.3
+  logger: ^2.0.2
+  
+  # Temporalmente comentado para resolver problemas de compilación
+  # share_plus: ^6.3.4
+  
+  # Firebase
+  firebase_core: ^2.16.0
+  cloud_firestore: ^4.9.2
+  firebase_auth: ^4.10.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/

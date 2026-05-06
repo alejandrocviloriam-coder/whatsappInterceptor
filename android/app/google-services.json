@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "499624171468",
+    "project_id": "whatsappinterceptor",
+    "storage_bucket": "whatsappinterceptor.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499624171468:android:f4575fd7363cd935192f69",
+        "android_client_info": {
+          "package_name": "com.example.whatsapp_interceptor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUFsBZ2dqPLEC-NY8Yqvr7s--89g9snfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
